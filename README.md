@@ -9,6 +9,6 @@ It’s your turn today to modelize some 3D magnificent landscapes, imaginary or 
 
 Use the school graphical library: MiniLibX. \
 This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events. \
-This is the opportunity to get familiar with MiniLibX, to discover the basics of graphics programming, especially how to place points in space, join them and, most important, how to see the scene from a specific viewpoint. \
+This is the opportunity to get familiar with MiniLibX, to discover the basics of graphics programming, especially how to place points in space, join them and, most important, how to see the scene from a specific viewpoint. 
 
 Currently WIP.
