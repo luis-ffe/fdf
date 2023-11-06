@@ -1,4 +1,4 @@
-#include "minilibx_macos/mlx.h"
+#include "minilibx/mlx.h"
 #include <stdlib.h>
 #include <signal.h>
 #include <unistd.h>
