@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-MLX_DIR = minilibx_macos
+MLX_DIR = minilibx
 MLX = $(MLX_DIR)/libmlx.a
 MLX_HEADERS = -I $(MLX_DIR)
 NAME = fdf
