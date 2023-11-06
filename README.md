@@ -1,11 +1,11 @@
-## fdf 
+## FDF 
 Fil de Fer / Wireframe
 
 "The representation in 3D of a landscape is a critical aspect of modern mapping. For example, in these times of spatial exploration, to have a 3D representation of Mars is a prerequisite condition to its conquest.
 As another example, comparing various 3D representations of an area of high tectonic activity will allow you to better understand these phenomena and their evolution, and as a result, be better prepared.
 It’s your turn today to modelize some 3D magnificent landscapes, imaginary or not."
 
-## objectives:
+## Objectives:
 
 Use the school graphical library: MiniLibX. \
 This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events. \
