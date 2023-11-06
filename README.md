@@ -12,3 +12,9 @@ This library was developed internally and includes basic necessary tools to open
 This is the opportunity to get familiar with MiniLibX, to discover the basics of graphics programming, especially how to place points in space, join them and, most important, how to see the scene from a specific viewpoint. 
 
 Currently WIP.
+
+## Use
+
+Download minilibx Library and move it to the fdf folder. \
+Now run make and and the library must compile with the project. \
+As long as minilibx folder is called "minilibx" everything should compile.
