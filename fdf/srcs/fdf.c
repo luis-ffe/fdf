@@ -70,7 +70,6 @@ void	lst_add_last(t_coordinate *lst, t_coordinate *new)
 
 void	filter_data(const char *str, t_coordinate *init_node)
 {
-	unsigned char *s;
 	static int nl_count;
 	char *nbr;
 	int i;
@@ -79,22 +78,21 @@ void	filter_data(const char *str, t_coordinate *init_node)
 	
 	i = 0;
 	x_count = 0;
-	s = (unsigned char *)str;
 	nbr = malloc(sizeof(char) * 12);
-	while(s[i])
+	while(str[i])
 	{
 		j = 0;
-		if (!ft_isdigit(s[i]))
+		if (!ft_isdigit(str[i]))
 			break;
-		if (s[i] == '\n')
+		if (str[i] == '\n')
 		{
 			x_count = 0;
 			nl_count++;
 			break;
 		}
-		while(ft_isdigit(s[i + j]))
+		while(ft_isdigit(str[i + j]))
 		{
-			nbr[j] = s[i + j];
+			nbr[j] = str[i + j];
 			j++;
 		}
 		if(j != 0)
