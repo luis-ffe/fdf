@@ -6,7 +6,7 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:27:03 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/11/14 20:43:35 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:18:19 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ void	init_values(t_fdf *fdf)
 	fdf->meta.x = 0;
 	fdf->meta.y = 0;
 	fdf->meta.fd = 0;
+	// fdf->meta.zoom = 15;
+	// fdf->meta.img = NULL;
+	// fdf->meta.addr = NULL;
+	// fdf->meta.bits_per_pixel = 32;
+	// fdf->meta.line_length = 32;
+	// fdf->meta.endian = 0;
 }
 
 t_fdf	*init(void)

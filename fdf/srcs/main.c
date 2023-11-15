@@ -6,7 +6,7 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:52:20 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/11/14 20:44:26 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:37:32 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     map_init(fdf, argv[1]);
 	ft_printf("%im**********\n", fdf->meta.y);
 	ft_printf("%i*m*********\n", fdf->meta.x);
-	run_window(fdf);
+	run_window(fdf); //leaks aqui
 	
 	//FUNTION fOR THE MATH PROJECTION AND FUTURE ROTATIONS
 	//FUNTIONS FOR THE WINDOWS SETUP, UPDATE AND IMAGE BUILD

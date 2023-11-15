@@ -6,7 +6,7 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:53:08 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/11/14 20:44:50 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:18:10 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@
 # include <X11/keysym.h>
 
 //macros
-
 # define READ_BUFFER 700000
-# define WIN_W 800
-# define WIN_H 800
+# define WIN_W 1920
+# define WIN_H 1080
 
 //structs
 
@@ -51,6 +50,12 @@ typedef struct	s_meta
 	int		fd;
 	int 	x;
 	int 	y;
+	// int		zoom;
+	// void	*img;
+	// char	*addr;
+	// int		bits_per_pixel;
+	// int		line_length;
+	// int		endian;
 }				t_meta;
 
 //main structure to initialize all the others
