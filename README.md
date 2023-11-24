@@ -15,6 +15,8 @@ Currently WIP.
 
 ## Use
 
-Download minilibx Library and move it to the fdf folder. \
+Download minilibx Library and move it to the fdf folder check the path and name in the makefile to use it acordingly. \
 Now run make and and the library must compile with the project. \
+My libft , ft_printf and get_next_line are all in one library already merged in this project so if you want to use yours you need to modify the MAKEFILE. \
+LINUX VERSION USED!! I built this hardcoding endian value of to zero if your system uses the other change it in init.c under srcs. \
 As long as minilibx folder is called "minilibx" everything should compile.
