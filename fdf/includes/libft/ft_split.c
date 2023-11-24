@@ -6,11 +6,12 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 07:33:35 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/10/08 17:12:30 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:46:15 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	my_count(char const *s, char c)
 {

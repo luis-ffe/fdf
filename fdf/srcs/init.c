@@ -5,43 +5,67 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 15:27:03 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/11/15 11:18:19 by luis-ffe         ###   ########.fr       */
+/*   Created: 2023/11/22 11:43:34 by luis-ffe          #+#    #+#             */
+/*   Updated: 2023/11/24 18:34:25 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fdf.h"
 
-// void init_img(t_fdf fdf)
-// {
-// 	fdf->	
-// } cenas da imagem e window ainda por fazer
-
-void	init_values(t_fdf *fdf)
+void	general_free(t_info *fdf)
 {
-	fdf->meta.mlx_p = NULL;
-	fdf->meta.win_p = NULL;
-	fdf->meta.mtx = NULL;
-	fdf->meta.buf = NULL;
-	fdf->meta.x = 0;
-	fdf->meta.y = 0;
-	fdf->meta.fd = 0;
-	// fdf->meta.zoom = 15;
-	// fdf->meta.img = NULL;
-	// fdf->meta.addr = NULL;
-	// fdf->meta.bits_per_pixel = 32;
-	// fdf->meta.line_length = 32;
-	// fdf->meta.endian = 0;
+	int	k;
+
+	k = 0;
+	while (k < fdf->map_h)
+	{
+		free(fdf->map[k]);
+		k++;
+	}
+	free(fdf->map);
+	free(fdf);
+	ft_printf("\n -- TRUE -- \n");
 }
 
-t_fdf	*init(void)
+int	close_win_free(t_info *fdf)
 {
-	t_fdf *fdf;
-	
-	fdf = malloc(sizeof(t_fdf));
-	if(!fdf)
-		return (NULL);
-	init_values(fdf);
-	//init_img();
+	mlx_destroy_window(fdf->mlx, fdf->mlx_win);
+	mlx_destroy_image(fdf->mlx, fdf->img);
+	mlx_destroy_display(fdf->mlx);
+	free(fdf->mlx);
+	ft_printf("\n-- Display Cleared --\n");
+	general_free(fdf);
+	exit(EXIT_SUCCESS);
+}
+
+t_info	*init_alloc(void)
+{
+	t_info	*fdf;
+
+	fdf = malloc(sizeof(t_info));
+	if (!fdf)
+		exit(EXIT_SUCCESS);
 	return (fdf);
+}
+
+void	init_fields(t_info *fdf)
+{
+	fdf->mlx = mlx_init();
+	fdf->mlx_win = mlx_new_window(fdf->mlx, WIN_W, WIN_H, "FdF");
+	fdf->img_w = 1920;
+	fdf->img_h = 1080;
+	fdf->img = mlx_new_image(fdf->mlx, fdf->img_w, fdf->img_h);
+	fdf->addr = mlx_get_data_addr(fdf->img, &fdf->bits_per_pixel,
+			&fdf->line_length, &fdf->endian);
+	fdf->map_h = 0;
+	fdf->map_w = 0;
+	fdf->map = NULL;
+	fdf->ops.zoom = 20;
+	fdf->ops.x_start = 0;
+	fdf->ops.y_start = 0;
+	fdf->ops.x_ag = 0.61;
+	fdf->ops.y_ag = 0;
+	fdf->ops.z_ag = 0;
+	fdf->color = 0xFFFFFF;
+	fdf->plane = 1;
 }

@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   keys_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 20:35:25 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/11/24 16:29:54 by luis-ffe         ###   ########.fr       */
+/*   Created: 2023/11/23 06:55:12 by luis-ffe          #+#    #+#             */
+/*   Updated: 2023/11/24 14:30:19 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../fdf.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t n)
+void	zoom_in(t_info *fdf)
 {
-	char	*sub;
-	size_t	size;
+	if (fdf->ops.zoom > 2)
+		fdf->ops.zoom /= 1.5;
+}
 
-	if (!s)
-		return (NULL);
-	size = ft_strlen(s);
-	if (start >= size)
-		return (ft_strdup(""));
-	size = ft_strlen(s + start);
-	if (size < n)
-		n = size;
-	sub = (char *)malloc(sizeof(char) * (n + 1));
-	if (!sub)
-		return (NULL);
-	ft_strlcpy(sub, s + start, (n + 1));
-	return (sub);
+void	zoom_out(t_info *fdf)
+{
+	if (fdf->ops.zoom < 10000)
+		fdf->ops.zoom *= 1.5;
+}
+
+int	mouse_key(int key, int x, int y, void *param)
+{
+	t_info	*fdf;
+
+	(void) x;
+	(void) y;
+	fdf = (t_info *)param;
+	if (key == 5)
+		zoom_in(fdf);
+	if (key == 4)
+		zoom_out(fdf);
+	window_updater(fdf);
+	return (0);
 }

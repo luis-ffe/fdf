@@ -1,6 +1,7 @@
 NAME = fdf
 
-SRCS_LIST = main.c utilis_data.c get_data.c init.c window.c
+SRCS_LIST = main.c keys.c keys_2.c window.c get_data.c utilis.c init.c \
+			img_pixel.c draw.c draw_utilis.c bresenham_algo.c 
 
 SRCS_DIR = srcs/
 SRCS = $(addprefix $(SRCS_DIR), $(SRCS_LIST))
