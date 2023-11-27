@@ -11,7 +11,7 @@ OBJS = $(addprefix $(OBJS_DIR), $(SRCS_LIST:.c=.o))
 LIBFT_DIR = includes/libft/
 LIBFT = $(addprefix $(LIBFT_DIR), libft.a)
 
-LIBMLX_DIR = includes/minilibx/
+LIBMLX_DIR = includes/minilibx-linux/
 LIBMLX = $(addprefix $(LIBMLX_DIR), libmlx.a)
 
 CC = cc

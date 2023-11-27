@@ -6,7 +6,7 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 11:43:34 by luis-ffe          #+#    #+#             */
-/*   Updated: 2023/11/24 18:34:25 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2023/11/27 10:33:12 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,5 @@ void	init_fields(t_info *fdf)
 	fdf->ops.z_ag = 0;
 	fdf->color = 0xFFFFFF;
 	fdf->plane = 1;
+	fdf->zup = 0;
 }

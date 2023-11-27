@@ -40,6 +40,7 @@ void	isometric(t_info *fdf, float *x, float *y, int *z)
 	point.x = *x * fdf->ops.zoom;
 	point.y = *y * fdf->ops.zoom;
 	point.z = *z * fdf->ops.zoom;
+	point.z = point_z_updater(point.z, fdf);
 	point = point_math(fdf, point);
 	*x = point.x;
 	*y = point.y;
