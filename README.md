@@ -1,22 +1,19 @@
-## FDF 
-Fil de Fer / Wireframe
+## FDF: Fil de Fer / Wireframe
 
-"The representation in 3D of a landscape is a critical aspect of modern mapping. For example, in these times of spatial exploration, to have a 3D representation of Mars is a prerequisite condition to its conquest.
-As another example, comparing various 3D representations of an area of high tectonic activity will allow you to better understand these phenomena and their evolution, and as a result, be better prepared.
-It’s your turn today to modelize some 3D magnificent landscapes, imaginary or not."
+The 3D representation of landscapes plays a crucial role in modern mapping techniques. For instance, a detailed 3D model of Mars is essential for future exploration and potential conquest of the planet. Similarly, comparing various 3D representations of regions with significant tectonic activity can enhance our understanding of geological phenomena and their evolution, ultimately leading to better preparedness for such events. 
 
-## Objectives:
+In this project, you will have the opportunity to create stunning 3D landscapes, whether real or imaginary.
 
-Use the school graphical library: MiniLibX. \
-This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events. \
-This is the opportunity to get familiar with MiniLibX, to discover the basics of graphics programming, especially how to place points in space, join them and, most important, how to see the scene from a specific viewpoint. 
+## Objectives
 
-Currently WIP.
+Utilize the **MiniLibX** graphical library, which was developed internally, to access essential tools for opening windows, creating images, and handling keyboard and mouse events. This project serves as an excellent introduction to MiniLibX and graphics programming, focusing on key concepts such as placing points in space, connecting them, and visualizing the scene from a specific viewpoint.
 
-## Use
+## Usage Instructions
 
-Download minilibx Library and move it to the fdf folder check the path and name in the makefile to use it acordingly. \
-Now run make and and the library must compile with the project. \
-My libft , ft_printf and get_next_line are all in one library already merged in this project so if you want to use yours you need to modify the MAKEFILE. \
-LINUX VERSION USED!! I built this hardcoding endian value of to zero if your system uses the other change it in init.c under srcs. \
-As long as minilibx folder is called "minilibx" everything should compile.
+1. Download the MiniLibX library and move it into the FDF project folder. Ensure that the path and name in the Makefile are correctly configured.
+2. Run `make` to compile the project along with the library.
+3. The `libft`, `ft_printf`, and `get_next_line` libraries are already merged into this project. If you wish to use your own versions, you will need to modify the Makefile accordingly.
+4. This project has been developed and tested on a Linux environment. The endian value has been hardcoded to zero; if your system uses a different configuration, please update it in `init.c` under the `srcs` directory.
+5. As long as the MiniLibX folder is named "minilibx," everything should compile successfully.
+
+Feel free to reach out with any questions or for further assistance!
